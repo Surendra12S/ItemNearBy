@@ -11,7 +11,7 @@ function SearchResults() {
     useEffect(() => {
         if (query) {
             axios
-                .get("http://localhost:4000/api/item/search-items?query=" + query)
+                .get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/item/search-items?query=` + query)
                 .then((res) => setItems(res.data))
                 .catch((err) => console.error(err));
         }
@@ -27,7 +27,7 @@ function SearchResults() {
                     {items.map((item) => (
                         <div className="item-card" key={item._id}>
                             <img
-                                src={`http://localhost:4000/uploads/${item.image}`}
+                                src={`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/uploads/${item.image}`}
                                 alt={item.name}
                             />
                             <h4>{item.name}</h4>

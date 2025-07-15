@@ -11,7 +11,7 @@ import { FcRating } from "react-icons/fc";
 
 function Home(){
 
-    const url = "http://localhost:4000"
+    const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`
     const [shopList,setShopList] = useState([]);
 
     const fetchList = async () =>{

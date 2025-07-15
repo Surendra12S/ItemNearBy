@@ -8,7 +8,7 @@ function LoginPopup({ setShowLogin, setIsLoggedIn, setUserRole }) {
   const [token, setToken] = useState("");
   const [selectedRole, setSelectedRole] = useState(""); // "owner" or "customer"
 
-  const url = "http://localhost:4000";
+  const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`;
 
   const [data, setData] = useState({
     name: "",

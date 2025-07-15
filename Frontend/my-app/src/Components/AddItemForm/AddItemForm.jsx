@@ -44,7 +44,7 @@ function AddItemForm() {
 
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/item/add-item",
+    `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/item/add-item`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },

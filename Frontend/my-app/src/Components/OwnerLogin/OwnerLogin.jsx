@@ -18,7 +18,7 @@ function OwnerLogin() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/api/shop/ownerLogin", {
+      const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/shop/ownerLogin`, {
         name: shopName.trim(),
         phoneNumber: phoneNumber.trim(),
         password: password.trim(),

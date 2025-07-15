@@ -8,7 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 
 function AddStoreDetails(){
    
-   const url = "http://localhost:4000";
+   const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`;
    const [image,SetImage] = useState(false);
    const [data,setData] = useState({
       name:"",

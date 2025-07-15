@@ -28,12 +28,12 @@ function ShopDetails() {
     );
   }
 
-  const url = "http://localhost:4000";
+  const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`;
 
 
   //1
   useEffect(()=>{
-    axios.get(`http://localhost:4000/api/item/get-items/${shop._id}`)
+    axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/item/get-items/${shop._id}`)
     .then((res)=>{
       setItems(res.data);
     }).catch((err)=>{
