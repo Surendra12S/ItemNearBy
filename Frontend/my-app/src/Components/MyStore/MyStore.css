@@ -1,0 +1,42 @@
+.my-store-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  height: 400px;
+  margin-top: 130px;
+}
+
+.my-store-container:hover {
+  transform: translateY(-2px);
+}
+
+.my-store-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.my-store-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.my-store-container p {
+  font-size: 14px;
+  color: #666;
+  margin: 3px 0;
+  text-align: center;
+}

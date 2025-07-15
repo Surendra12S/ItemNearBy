@@ -1,0 +1,179 @@
+.FullContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.newToclass,
+.AlreadyClass {
+  flex: 1 1 300px;
+  max-width: 400px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.addStoreDetailsContainer {
+  flex: 1 1 380px;
+  max-width: 450px;
+  padding: 25px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #f0f0f0;
+  height: 700px;
+}
+
+.CrossIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CrossIcon p{
+  margin-left: 118px;
+}
+.icon{
+  margin-left: 100px;
+  font-size: larger;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+form.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-img-upload {
+  text-align: center;
+}
+
+.add-img-upload p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.add-img-upload img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.add-img-upload img:hover {
+  transform: scale(1.05);
+  border-color: #888;
+}
+
+form.flex-col p {
+  font-weight: 500;
+  color: #555;
+}
+
+form.flex-col input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+form.flex-col input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submitBtn,
+.goToMyStorBtn {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.submitBtn:hover {
+  background-color: #e64a19;
+}
+
+.goToMyStorBtn {
+  background-color: #3f51b5;
+  color: #fff;
+  width: 100%;
+}
+
+.goToMyStorBtn:hover {
+  background-color: #32408f;
+}
+
+.custom-toast {
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 10px !important;
+  background-color: #323232 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .FullContainer {
+    flex-direction: column;
+    padding: 10px;
+  }
+   .newToclass{
+    margin-top: 200px;
+    margin-bottom: -180px;
+   }
+  .addStoreDetailsContainer {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .add-img-upload img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  form.flex-col input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .add-img-upload img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .submitBtn,
+  .goToMyStorBtn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .newToclass,
+  .AlreadyClass {
+    font-size: 0.9rem;
+    margin-top: 100px;
+  }
+}

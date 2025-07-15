@@ -1,0 +1,197 @@
+
+.PurposeHeading {
+  max-width: 1100px;
+  margin: 120px auto 60px auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  text-align: center;
+ 
+}
+
+.mainHeading {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.subHeading,
+.subHeadingTwo {
+  font-size: 11px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #f0f9ff;
+}
+
+
+.SubHeading {
+  margin: 60px 0 20px 80px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.shopListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 60px 80px 60px;
+}
+
+
+.link-style-storeList {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.list-format {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  width: 320px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 380px;
+}
+
+.list-format:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+
+.list-format img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.storeNameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 0 20px;
+}
+
+.StoreName {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.storeNameContainer p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #888;
+}
+
+.StoreNumber,
+.StoreAddress,
+.StoreCategory {
+  font-size: 16px;
+  padding: 5px 20px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phoneIcon,
+.locationIcon,
+.categoryIcon {
+  color: #0ea5e9;
+}
+
+
+@media (max-width: 768px) {
+  .PurposeHeading {
+    padding: 30px 20px;
+    margin: 150px 10px 40px 10px;
+  }
+
+  .mainHeading {
+    font-size: 32px;
+  }
+
+  .subHeading,
+  .subHeadingTwo {
+    font-size: 16px;
+  }
+
+  .SubHeading {
+    margin: 40px 20px 20px;
+    font-size: 22px;
+  }
+
+  .shopListContainer {
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .list-format {
+    width: 400px;
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .PurposeHeading {
+    padding: 25px 16px;
+    margin: 40px 10px;
+    border-radius: 16px;
+    margin-top: 180px;
+  }
+
+  .mainHeading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .subHeading,
+  .subHeadingTwo {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .SubHeading {
+    font-size: 20px;
+    margin: 30px 12px 16px;
+    text-align: center;
+  }
+
+  .shopListContainer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 12px 40px 12px;
+  }
+
+  .list-format {
+    width: 350px;
+  }
+
+  .storeNameContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .storeNameContainer p {
+    font-size: 14px;
+  }
+
+  .StoreNumber,
+  .StoreAddress,
+  .StoreCategory {
+    font-size: 14px;
+    padding: 4px 16px;
+  }
+}

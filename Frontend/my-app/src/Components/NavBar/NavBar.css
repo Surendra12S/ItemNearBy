@@ -1,0 +1,179 @@
+.NavBarConatiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  padding: 0 30px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 10000;
+}
+
+.logoImage {
+  width: 140px;
+  cursor: pointer;
+}
+
+.locationSection {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: tomato;
+  font-weight: 500;
+}
+
+.locationSection:hover {
+  color:rgb(240, 101, 76);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  margin: 0 30px;
+  max-width: 500px;
+}
+
+.serchIcon {
+  position: absolute;
+  left: 12px;
+  color: #777;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.inputElm {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.inputElm:hover,
+.inputElm:focus {
+  border-color: tomato;
+  outline: none;
+}
+
+.LoginElm,
+.addStoreBtn {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  color: tomato;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.LoginElm:hover,
+.addStoreBtn:hover,
+.LoginElm:focus,
+.addStoreBtn:focus {
+  background-color: tomato;
+  color: white;
+}
+
+.profileIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+/* Dropdown styles */
+.NavBarConatiner .dropdown {
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 6px;
+}
+.dropdown{
+margin-top: 10px;
+}
+
+.dropdown button{
+ font-weight: bold;
+}
+.dropdown:hover{
+  background-color:lightblue;
+}
+
+@media (max-width: 1024px) {
+  .inputContainer {
+    margin: 0 20px;
+  }
+
+  .logoImage {
+    width: 120px;
+  }
+
+  .LoginElm,
+  .addStoreBtn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .NavBarConatiner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .logoImage {
+    margin: 0 auto;
+    width: 100px;
+  }
+
+  .locationSection {
+    margin: 10px 0;
+  }
+
+  .inputContainer {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .LoginElm,
+  .addStoreBtn {
+    margin: 5px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputElm {
+    font-size: 12px;
+  }
+
+  .LoginElm,
+  .addStoreBtn {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-bottom: -6px;
+  }
+
+  .serchIcon {
+    font-size: 18px;
+  }
+
+  .locationtext {
+    display: none;
+  }
+}

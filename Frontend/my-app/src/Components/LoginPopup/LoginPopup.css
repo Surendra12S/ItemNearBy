@@ -1,0 +1,144 @@
+
+.login-popup {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.login-popup-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 30px 28px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-popup-title h2 {
+  font-size: 22px;
+  margin: 0;
+  color: #222;
+}
+
+.crossIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.crossIcon:hover {
+  color: #e53935;
+}
+
+.login-popup-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-popup-input input {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-popup-input input:focus {
+  border-color: #ff7043;
+}
+
+.login-popup-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-popup-container button:hover {
+  background-color: #e64a19;
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+  margin-top: -10px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+.login-popup p {
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.login-popup p span {
+  color: #ff5722;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.login-popup p span:hover {
+  text-decoration: underline;
+}
+
+.role-buttons{
+  display: flex;
+  gap: 20px;
+  margin-left: 23px;
+}
+
+.role-buttons button:focus{
+
+  background-color:#e53935 ;
+}
+
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
