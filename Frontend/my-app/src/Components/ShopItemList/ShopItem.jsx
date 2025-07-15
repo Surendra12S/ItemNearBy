@@ -4,7 +4,6 @@ import "./ShopItem.css";
 
 function ShopItem() {
   const [items, setItems] = useState([]);
-
   const baseUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
 
   useEffect(() => {
