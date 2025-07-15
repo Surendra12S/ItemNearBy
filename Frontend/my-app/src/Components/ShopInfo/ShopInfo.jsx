@@ -28,19 +28,20 @@ function ShopDetails() {
     );
   }
 
-  const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`;
+const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`;
 
-
-  //1
-  useEffect(()=>{
-    axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/item/get-items/${shop._id}`)
-    .then((res)=>{
+// 1
+useEffect(() => {
+  axios
+    .get(`${url}/api/item/get-items/${shop._id}`)
+    .then((res) => {
       setItems(res.data);
-    }).catch((err)=>{
-      console.log("Error fetching shop items:",err);
     })
-  },[shop]);
-  //1
+    .catch((err) => {
+      console.log("Error fetching shop items:", err);
+    });
+}, [shop]);
+
 
    const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(shop.address)}`;
 
