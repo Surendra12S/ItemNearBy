@@ -5,17 +5,19 @@ import "./ShopItem.css";
 function ShopItem() {
   const [items, setItems] = useState([]);
 
+  const baseUrl = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
+
   useEffect(() => {
     const storedShop = localStorage.getItem("ownerShop");
     if (storedShop) {
       const shop = JSON.parse(storedShop);
-      fetchItems(shop._id); 
+      fetchItems(shop._id);
     }
   }, []);
 
   const fetchItems = async (shopId) => {
     try {
-      const res = await axios.get(`http://localhost:4000/api/item/get-items/${shopId}`);
+      const res = await axios.get(`${baseUrl}/api/item/get-items/${shopId}`);
       setItems(res.data);
     } catch (err) {
       console.error("Error fetching items:", err);
@@ -29,7 +31,7 @@ function ShopItem() {
           <div key={item._id} className="item-card">
             <img
               className="itemImg"
-              src={`http://localhost:4000/uploads/${item.image}`}
+              src={`${baseUrl}/uploads/${item.image}`}
               alt={item.name}
             />
             <h3>{item.name}</h3>
