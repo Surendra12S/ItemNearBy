@@ -51,7 +51,6 @@ function AddStoreDetails(){
 
 return(
    <div className="FullContainer">
-      <RxCross2 />
     <div className="newToclass" >
       <h1>New to ItemNearBy? Fill the Form below to add your store details and start sharing your products.</h1>
     </div>

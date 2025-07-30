@@ -126,6 +126,8 @@ margin-top: 10px;
   .logoImage {
     margin-left: -6px;
     width: 130px;
+    margin-bottom: 2px;
+    margin-top: 2px;
   }
 
   .locationSection {
@@ -150,7 +152,7 @@ margin-top: 10px;
 
   .LoginElm{
     position: relative;
-    top: -72px;
+    top: -75px;
     left: 350px;
   }
   .addStoreBtn {
