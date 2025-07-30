@@ -93,7 +93,7 @@
   margin-top: 2px;
 }
 
-/* Dropdown styles */
+
 .NavBarConatiner .dropdown {
   position: absolute;
   right: 30px;
@@ -114,22 +114,9 @@ margin-top: 10px;
   background-color:lightblue;
 }
 
-@media (max-width: 1024px) {
-  .inputContainer {
-    margin: 0 20px;
-  }
 
-  .logoImage {
-    width: 120px;
-  }
 
-  .LoginElm,
-  .addStoreBtn {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-}
-
+  
 @media (max-width: 600px) {
   .NavBarConatiner {
     flex-wrap: wrap;
