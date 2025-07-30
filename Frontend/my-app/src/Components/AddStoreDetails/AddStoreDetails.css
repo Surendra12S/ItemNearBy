@@ -154,15 +154,23 @@ form.flex-col input:focus {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   form.flex-col input {
     padding: 10px;
     font-size: 0.9rem;
   }
-
+  .newToclass h1{
+     font-size: 18px;
+     width: 300px;
+     margin-top: -20px;
+  }
   .add-img-upload img {
     width: 90px;
     height: 90px;
+  }
+
+  .addStoreDetailsContainer{
+    margin-top: -40px;
   }
 
   .submitBtn,
@@ -171,9 +179,13 @@ form.flex-col input:focus {
     font-size: 0.9rem;
   }
 
-  .newToclass,
-  .AlreadyClass {
+  .newToclass{
     font-size: 0.9rem;
     margin-top: 100px;
   }
+
+  .AlreadyClass{
+    margin-top: 30px;
+  }
+
 }

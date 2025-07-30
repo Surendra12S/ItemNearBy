@@ -69,14 +69,17 @@
 }
 
 
-/* Responsive */
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
+  .footer-brand h1{
+    margin-left: 50px;
+  }
   .footer-brand p {
     text-align: center;
   }

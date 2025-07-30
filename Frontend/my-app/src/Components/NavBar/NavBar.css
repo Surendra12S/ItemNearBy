@@ -130,50 +130,46 @@ margin-top: 10px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .NavBarConatiner {
     flex-wrap: wrap;
     height: auto;
-    padding: 10px 20px;
   }
 
   .logoImage {
-    margin: 0 auto;
-    width: 100px;
+    margin-left: -6px;
+    width: 130px;
   }
 
   .locationSection {
-    margin: 10px 0;
+   display: none;
   }
 
   .inputContainer {
     flex: 1 1 100%;
     margin: 0;
   }
+  .profileIcon{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    top: -75px;
+    left: 360px;
+  }
+  .dropdown{
+    margin-top: 70px;
+    margin-right: 18px;
+  }
 
-  .LoginElm,
+  .LoginElm{
+    position: relative;
+    top: -72px;
+    left: 350px;
+  }
   .addStoreBtn {
-    margin: 5px 5px;
+   margin-right: 150px;
+   margin-bottom: 5px;
+   margin-top: 5px;
   }
 }
 
-@media (max-width: 480px) {
-  .inputElm {
-    font-size: 12px;
-  }
-
-  .LoginElm,
-  .addStoreBtn {
-    font-size: 12px;
-    padding: 5px 10px;
-    margin-bottom: -6px;
-  }
-
-  .serchIcon {
-    font-size: 18px;
-  }
-
-  .locationtext {
-    display: none;
-  }
-}
