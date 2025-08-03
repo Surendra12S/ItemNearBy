@@ -30,7 +30,7 @@ function ShopItem() {
           <div key={item._id} className="item-card">
             <img
               className="itemImg"
-              src={`${baseUrl}/uploads/${item.image}`}
+              src={`${item.image}`}
               alt={item.name}
             />
             <h3>{item.name}</h3>
