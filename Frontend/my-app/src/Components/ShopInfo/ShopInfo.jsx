@@ -45,7 +45,7 @@ function ShopDetails() {
       <div className="shop-details">
         <div className="shop-container">
           <div className="shop-image-wrapper">
-            <img src={`${url}/images/${shop.image}`} alt={shop.name} className="shop-image" />
+            <img src={`${shop.image}`} alt={shop.name} className="shop-image" />
           </div>
           <div className="shop-info">
             <h2 className="shop-name">{shop.name}</h2>

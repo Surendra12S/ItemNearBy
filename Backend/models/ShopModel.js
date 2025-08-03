@@ -9,6 +9,6 @@ const ShopSchema = new mongoose.Schema({
     password:{type:String,require:true}
 })
 
-const ShopModel = mongoose.model.ShopModel || mongoose.model("ShopModel",ShopSchema)
+const ShopModel = mongoose.models.ShopModel || mongoose.model("ShopModel",ShopSchema);
 
 export default ShopModel;

@@ -10,13 +10,13 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //app config
-const app = express()
-const port = 4000
+const app = express();
+const port = 4000;
 
 
 //middleware
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 
 // db connection
@@ -24,9 +24,9 @@ connectDB();
 
 
 // api endpoint
-app.use("/api/shop",ShopRouter)
-app.use("/images",express.static('uploads'))
-app.use("/api/user",userRouter)
+app.use("/api/shop",ShopRouter);
+app.use("/images",express.static('uploads'));
+app.use("/api/user",userRouter);
 //api endpoint two
 app.use("/uploads",express.static("uploads"));
 app.use("/api/item",ItemRoute);

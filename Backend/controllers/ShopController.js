@@ -1,62 +1,62 @@
 import ShopModel from "../models/ShopModel.js";
-import fs from 'fs';
-import bcrypt from 'bcrypt';
+import bcrypt from "bcrypt";
 
 
+const addShop = async (req, res) => {
+  const { name, phoneNumber, address, password, category } = req.body;
 
-// add shop data
+  try {
+    if (!req.file || !req.file.path) {
+      return res.status(400).json({ success: false, message: "Image upload failed" });
+    }
 
-const addShop = async (req,res) =>{
+    const imageUrl = req.file.path; // ✅ Cloudinary returns full image URL
+    
+   
 
-    let image_filename = `${req.file.filename}`;
-
-    const {name,phoneNumber,address,password,category} = req.body;
-
-     const salts = await bcrypt.genSalt(10)
-     const hashedPasswords = await bcrypt.hash(password,salts)
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
     const shop = new ShopModel({
-        name:name,
-        phoneNumber:phoneNumber,
-        address:address,
-        image:image_filename,
-        category:category,
-        password:hashedPasswords,
-    })
-    try{
-       await shop.save();
-       res.json({success:true,message:"Shop Added"})
-    }catch(error){
-         console.log(error);
-         res.json({success:false,message:"Error"})
-    }
-}
+      name,
+      phoneNumber,
+      address,
+      image: imageUrl, // ✅ full Cloudinary URL
+      category,         // ✅ added missing category
+      password: hashedPassword,
+    });
 
-// all Shop list
-const listShop = async (req,res)=>{
-    try{
-      const shops = await ShopModel.find({});
-      res.json({success:true,data:shops})
-    }catch(error){
-         console.log(error);
-         res.json({success:false,message:"Error"})
-    }
-}
+    await shop.save();
+    res.json({ success: true, message: "Shop Added" });
+  } catch (error) {
+    console.error("Add Shop Error:", error);
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
 
-// remove shop 
-const removeShop = async (req,res)=>{
+const listShop = async (req, res) => {
+  try {
+    const shops = await ShopModel.find({});
+    res.json({ success: true, data: shops });
+  } catch (error) {
+    console.error("List Shop Error:", error);
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
 
-    try{
-       const shop = await ShopModel.findById(req.body.id);
-       fs.unlink(`uploads/${shop.image}`,()=>{})
-
-       await ShopModel.findByIdAndDelete(req.body.id);
-       res.json({success:true,message:"shop is removed"})
-    }catch(error){
-             console.log(error);
-             res.json({success:false,message:"Error"})
+const removeShop = async (req, res) => {
+  try {
+    const shop = await ShopModel.findById(req.body.id);
+    if (!shop) {
+      return res.status(404).json({ success: false, message: "Shop not found" });
     }
 
-}
+    await ShopModel.findByIdAndDelete(req.body.id);
+    res.json({ success: true, message: "Shop is removed" });
+  } catch (error) {
+    console.error("Remove Shop Error:", error);
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
 
-export {addShop,listShop,removeShop};
+export { addShop, listShop, removeShop };

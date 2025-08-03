@@ -15,8 +15,8 @@ function Home(){
     const [shopList,setShopList] = useState([]);
 
     const fetchList = async () =>{
-        const response = await axios.get(`${url}/api/shop/list`);
-        console.log(response.data);
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/shop/list`);
+        console.log("Response",response.data);
         if(response.data.success){
             setShopList(response.data.data);
         }else{
@@ -49,7 +49,7 @@ return(
                         return(
                           <Link className="link-style-storeList" to={`/shop/${item._id}`} state={{shop:item}} key={index}>
                             <div className="list-format" >
-                             <img src={`${url}/images/`+item.image}/>
+                             <img src={item.image} alt="shopImg" />
                              <div className="storeNameContainer" >
                               <p className="StoreName" >{item.name}</p>
                               <p><FcRating />3.8</p>

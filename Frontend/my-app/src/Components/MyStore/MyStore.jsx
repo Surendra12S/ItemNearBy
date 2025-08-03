@@ -23,7 +23,7 @@ function MyStore() {
       
       {shop.image ? (
         <img
-          src={`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/images/${shop.image}`}
+          src={shop.image} 
           alt="Store"
           width={150}
         />
