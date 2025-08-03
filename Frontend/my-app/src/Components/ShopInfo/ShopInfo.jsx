@@ -64,7 +64,7 @@ function ShopDetails() {
           {
             items.length > 0 ? (items.map((item) => (
               <div className="ShopItemsList" key={item._id} >
-                <img className="imgItem" src={item.image} width={200} />
+                <img className="imgItem" src={item.image.replace("/upload/", "/upload/f_auto,q_auto/")} width={200} />
                 <h4>{item.name}</h4>
                 <p>Price: ₹{item.price}</p>
                 <p>Description: {item.description}</p>

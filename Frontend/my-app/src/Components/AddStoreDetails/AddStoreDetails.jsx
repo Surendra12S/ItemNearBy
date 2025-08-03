@@ -92,7 +92,7 @@ function AddStoreDetails() {
                   <input
                      type="file"
                      id="image"
-                     name="image" // ✅ important!
+                     name="image" 
                      hidden
                      required
                      accept="image/*"
@@ -169,9 +169,7 @@ function AddStoreDetails() {
                </button>
             </form>
 
-            <Link to="/ownerLogin">
-               <button className="goToMyStorBtn">Go to My Store</button>
-            </Link>
+            
          </div>
 
          <div className="AlreadyClass">

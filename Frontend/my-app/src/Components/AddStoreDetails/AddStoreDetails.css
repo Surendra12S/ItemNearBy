@@ -92,8 +92,7 @@ form.flex-col input:focus {
   outline: none;
 }
 
-.submitBtn,
-.goToMyStorBtn {
+.submitBtn {
   padding: 12px;
   font-size: 1rem;
   font-weight: 600;
@@ -113,15 +112,9 @@ form.flex-col input:focus {
   background-color: #e64a19;
 }
 
-.goToMyStorBtn {
-  background-color: #3f51b5;
-  color: #fff;
-  width: 100%;
-}
 
-.goToMyStorBtn:hover {
-  background-color: #32408f;
-}
+
+
 
 .custom-toast {
   margin-top: 20px;

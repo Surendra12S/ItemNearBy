@@ -49,7 +49,7 @@ return(
                         return(
                           <Link className="link-style-storeList" to={`/shop/${item._id}`} state={{shop:item}} key={index}>
                             <div className="list-format" >
-                             <img src={item.image} alt="shopImg" />
+                             <img src={item.image.replace("/upload/", "/upload/f_auto,q_auto/")} alt="shopImg" />
                              <div className="storeNameContainer" >
                               <p className="StoreName" >{item.name}</p>
                               <p><FcRating />3.8</p>

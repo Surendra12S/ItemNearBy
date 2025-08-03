@@ -61,9 +61,25 @@
   outline: none;
 }
 
-.LoginElm,
-.addStoreBtn {
-  cursor: pointer;
+.LoginElm{
+   cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  color: tomato;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  white-space: nowrap;
+  margin-right: 100px;
+}
+
+
+
+.addStoreBtn{
+ cursor: pointer;
   padding: 8px 16px;
   border: none;
   border-radius: 6px;
@@ -76,21 +92,40 @@
   white-space: nowrap;
 }
 
+.goToMyStorBtn {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  color: tomato;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.goToMyStorBtn{
+margin-left: 40px;
+}
+
 .LoginElm:hover,
 .addStoreBtn:hover,
 .LoginElm:focus,
-.addStoreBtn:focus {
+.addStoreBtn:focus,.goToMyStorBtn:hover,.goToMyStorBtn:focus{
   background-color: tomato;
   color: white;
 }
 
+
+
 .profileIcon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   object-fit: cover;
   cursor: pointer;
-  margin-left: 20px;
   margin-top: 2px;
+  margin-right: 10px;
 }
 
 
@@ -114,51 +149,122 @@ margin-top: 10px;
   background-color:lightblue;
 }
 
+.ownerControlsContainer{
+  display: flex;
+}
 
 
   
-@media (max-width: 600px) {
+/* ========== Tablet & Mobile Responsive ========== */
+@media (max-width: 1024px) {
   .NavBarConatiner {
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
     height: auto;
+    row-gap: 12px;
   }
 
   .logoImage {
-    margin-left: -6px;
-    width: 130px;
-    margin-bottom: 2px;
-    margin-top: 2px;
+    width: 110px;
   }
 
   .locationSection {
-   display: none;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 14px;
   }
 
   .inputContainer {
-    flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
     margin: 0;
   }
-  .profileIcon{
-    width: 26px;
-    height: 26px;
-    position: relative;
-    top: -75px;
-    left: 300px;
-  }
-  .dropdown{
-    margin-top: 70px;
-    margin-right: 18px;
+
+  .buttonsStyle {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 
-  .LoginElm{
-    position: relative;
-    top: -75px;
-    left: 330px;
+  .addStoreBtn,
+  .goToMyStorBtn {
+    flex: 1 1 45%;
+    min-width: 140px;
+    text-align: center;
+    margin: 0;
   }
-  .addStoreBtn {
-   margin-right: 150px;
-   margin-bottom: 5px;
-   margin-top: 5px;
+
+  .LoginElm {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .profileIcon {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .NavBarConatiner .dropdown {
+    right: 16px;
   }
 }
 
+/* ========== Mobile Only ========== */
+@media (max-width: 600px) {
+  .buttonsStyle {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logoImage{
+    margin-left:-14px;
+  }
+
+  .profileIcon{
+    position: relative;
+    top: -46px;   
+   }
+
+  .locationSection{
+    display: none;
+  }
+
+  
+  .addStoreBtn{
+    margin-left: 80px;
+    padding: 8px;
+    
+  }
+
+  .ownerControlsContainer .goToMyStorBtn{
+   margin-left: 50px;
+   padding:8px;
+   
+  }
+  
+  .dropdown{
+    margin-top: 48px;
+  }
+  .locationSection {
+    justify-content: center;
+    font-size: 13px;
+  }
+  .inputContainer{
+    margin-left: 10px;
+    margin-right: 60px;
+  }
+
+  .inputElm {
+    font-size: 13px;
+    padding: 8px 12px 8px 34px;
+  }
+
+  .serchIcon {
+    left: 10px;
+    font-size: 16px;
+  }
+}

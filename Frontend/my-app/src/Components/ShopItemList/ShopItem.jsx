@@ -30,7 +30,7 @@ function ShopItem() {
           <div key={item._id} className="item-card">
             <img
               className="itemImg"
-              src={item.image}
+              src={item.image.replace("/upload/", "/upload/f_auto,q_auto/")}
               alt={item.name}
             />
             <h3>{item.name}</h3>

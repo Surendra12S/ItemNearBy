@@ -27,7 +27,7 @@ function SearchResults() {
                     {items.map((item) => (
                         <div className="item-card" key={item._id}>
                             <img
-                                src={`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/uploads/${item.image}`}
+                                src={item.image}
                                 alt={item.name}
                             />
                             <h4>{item.name}</h4>

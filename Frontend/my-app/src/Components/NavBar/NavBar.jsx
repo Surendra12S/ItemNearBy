@@ -5,7 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import logoutIcon from "../../assets/logout_icon.png";
 import { useState } from "react";
-import userIcon from "../../assets/user.png"
+import userIcon from "../../assets/user.png";
 
 
 function NavBar({ setShowLogin, isLoggedIn, setIsLoggedIn, userRole }) {
@@ -59,6 +59,21 @@ function NavBar({ setShowLogin, isLoggedIn, setIsLoggedIn, userRole }) {
         />
       </div>
 
+        {isLoggedIn && userRole === "owner" && (
+        <div className="ownerControlsContainer" >
+          <div>
+        <Link to={"/addShop"}>
+          <button className="addStoreBtn">Add Your Store</button>
+        </Link>
+        </div>
+        <div>
+        <Link to="/ownerLogin">
+               <button className="goToMyStorBtn">Go to My Store</button>
+            </Link>
+            </div>
+            </div>
+      )}
+
       {!isLoggedIn ? (
         <button onClick={() => setShowLogin(true)} className="LoginElm">
           Login
@@ -91,11 +106,7 @@ function NavBar({ setShowLogin, isLoggedIn, setIsLoggedIn, userRole }) {
         </div>
       )}
 
-      {isLoggedIn && userRole === "owner" && (
-        <Link to={"/addShop"}>
-          <button className="addStoreBtn">Add Your Store</button>
-        </Link>
-      )}
+    
     </nav>
   );
 }

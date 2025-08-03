@@ -23,7 +23,7 @@ function MyStore() {
       
       {shop.image ? (
         <img
-          src={shop.image} 
+          src={shop.image.replace("/upload/", "/upload/f_auto,q_auto/")} 
           alt="Store"
           width={150}
         />
