@@ -13,6 +13,10 @@
   overflow-y: auto;
 }
 
+.login-popup .credentiols{
+  color: orange;
+}
+
 .login-popup-container {
   width: 100%;
   max-width: 400px;
@@ -114,6 +118,15 @@
   margin-left: 5px;
 }
 
+.login-popup p .copyBtn{
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
 .login-popup p span:hover {
   text-decoration: underline;
 }
@@ -125,7 +138,6 @@
 }
 
 .role-buttons button:focus{
-
   background-color:#e53935 ;
 }
 

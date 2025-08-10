@@ -3,7 +3,7 @@ import Logo from '../../assets/logo.jpg';
 import { FaLocationDot } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
-import logoutIcon from "../../assets/logout_icon.png";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 import { useState } from "react";
 import userIcon from "../../assets/user.png";
 
@@ -39,11 +39,6 @@ function NavBar({ setShowLogin, isLoggedIn, setIsLoggedIn, userRole }) {
         <img className="logoImage" src={Logo} alt="Logo" />
       </Link>
 
-      <div className="locationSection">
-        <h1 className="locationtext">Location</h1>
-        <FaLocationDot className="locationIcon" />
-      </div>
-
       <div className="inputContainer">
         <IoSearch
           className="serchIcon"
@@ -60,17 +55,13 @@ function NavBar({ setShowLogin, isLoggedIn, setIsLoggedIn, userRole }) {
       </div>
 
         {isLoggedIn && userRole === "owner" && (
-        <div className="ownerControlsContainer" >
-          <div>
+        <div className="buttonsStyle" >
         <Link to={"/addShop"}>
           <button className="addStoreBtn">Add Your Store</button>
         </Link>
-        </div>
-        <div>
         <Link to="/ownerLogin">
                <button className="goToMyStorBtn">Go to My Store</button>
             </Link>
-            </div>
             </div>
       )}
 
@@ -99,7 +90,7 @@ function NavBar({ setShowLogin, isLoggedIn, setIsLoggedIn, userRole }) {
                   gap: "8px",
                 }}
               >
-                <img src={logoutIcon} alt="Logout" style={{ width: 20 }} /> Logout
+                <RiLogoutBoxRLine /> Logout
               </button>
             </div>
           )}

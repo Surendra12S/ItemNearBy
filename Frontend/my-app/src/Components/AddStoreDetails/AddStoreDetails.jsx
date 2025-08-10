@@ -174,7 +174,7 @@ function AddStoreDetails() {
 
          <div className="AlreadyClass">
             <h1>
-               Already have a store? Click the button below to manage your
+               Already have a store? Click the "Go to My Store" button on navbar to manage your
                store.
             </h1>
          </div>

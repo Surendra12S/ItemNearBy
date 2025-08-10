@@ -6,7 +6,9 @@ import axios from "axios";
 function LoginPopup({ setShowLogin, setIsLoggedIn, setUserRole }) {
   const [currState, setCurrState] = useState("Login");
   const [token, setToken] = useState("");
-  const [selectedRole, setSelectedRole] = useState(""); // "owner" or "customer"
+  const [selectedRole, setSelectedRole] = useState("");
+  const [text] = useState("sairam@gmail.com"); 
+  const [password] = useState("85559283");
 
   const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`;
 
@@ -37,14 +39,25 @@ function LoginPopup({ setShowLogin, setIsLoggedIn, setUserRole }) {
     if (response.data.success) {
       setToken(response.data.token);
       localStorage.setItem("token", response.data.token);
-      localStorage.setItem("userRole", selectedRole); // Save role in local storage
+      localStorage.setItem("userRole", selectedRole); 
       setIsLoggedIn(true);
-      setUserRole(selectedRole); // Update parent state
+      setUserRole(selectedRole); 
       setShowLogin(false);
     } else {
       alert(response.data.message);
     }
   };
+
+   
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text)
+  };
+
+  const handleCopyBtn = () => {
+    navigator.clipboard.writeText(password)
+  };
+
 
   return (
     <div className="login-popup">
@@ -120,6 +133,8 @@ function LoginPopup({ setShowLogin, setIsLoggedIn, setUserRole }) {
             </p>
           )}
         </div>
+      
+          <p className="credentiols" >in case you don't want to create an account, you can use the following credentiols to login: <br></br> Email: <span>sairam@gmail.com</span><button onClick={handleCopy} className="copyBtn">Copy</button><br></br>Password: <span>85559283</span><button onClick={handleCopyBtn} className="copyBtn">Copy</button></p>
       </form>
     </div>
   );

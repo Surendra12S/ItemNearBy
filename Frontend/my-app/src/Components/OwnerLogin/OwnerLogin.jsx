@@ -11,6 +11,9 @@ function OwnerLogin() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [name] = useState("Mangilal Sweets Store");
+  const [number] = useState("918074952430");
+  const [psWord] = useState("85559283"); 
 
   const navigate = useNavigate();
 
@@ -30,6 +33,18 @@ function OwnerLogin() {
     } catch (error) {
       toast.error("Login failed. Please check your credentials.");
     }
+  };
+
+   const handleCopyname = () => {
+    navigator.clipboard.writeText(name)
+  };
+
+  const handleNumber = () =>{
+   navigator.clipboard.writeText(number)
+  };
+
+  const handlePassword = () =>{
+   navigator.clipboard.writeText(psWord)
   };
 
   return (
@@ -88,6 +103,8 @@ function OwnerLogin() {
         <button className="SubmitBtn" type="submit">
           Submit
         </button>
+
+        <p>To Test It Copy Past This Credentials <br></br>Shop Name :<span className="spanStyle"> Mangilal Sweets Store</span><button className="BtnStyle" onClick={handleCopyname} >Copy</button> <br></br>Phone Number : <span  className="spanStyle">918074952430</span> <button onClick={handleNumber} className="BtnStyle">Copy</button><br></br>Password : <span  className="spanStyle">85559283</span><button onClick={handlePassword} className="BtnStyle">Copy</button> </p>
       </form>
     </div>
   );
