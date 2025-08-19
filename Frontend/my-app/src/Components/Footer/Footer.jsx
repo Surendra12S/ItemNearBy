@@ -29,7 +29,7 @@ function Footer() {
       <div className="footer-bottom">
   © {new Date().getFullYear()} NearByItem. All rights reserved.
   <br />
-  Made by Surendra Dasari
+  Made by Revathi Salapu
 </div>
 
     </footer>
