@@ -19,10 +19,10 @@ function Footer() {
         </div>
 
         <div className="footer-socials">
-          <a href="https://www.instagram.com/recharge3680/"><FaInstagram /></a>
-          <a href="https://www.linkedin.com/in/dasari-surendra"><FaLinkedin /></a>
-          <a href="https://github.com/Surendra12S" ><IoLogoGithub /></a>
-          <a href="https://x.com/xyyamie?t=KzEwsyB35vzRr17PMRBREA&s=08"><FaTwitter /></a>
+          <a href=""><FaInstagram /></a>
+          <a href="https://www.linkedin.com/in/revathi-salapu-083712301/"><FaLinkedin /></a>
+          <a href="https://github.com/Revathi1411/ItemNeraBy-Web-App.git" ><IoLogoGithub /></a>
+          <a href=""><FaTwitter /></a>
         </div>
       </div>
 
